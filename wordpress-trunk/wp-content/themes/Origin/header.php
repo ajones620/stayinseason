@@ -22,6 +22,13 @@
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+
 	<script type="text/javascript">
 		document.documentElement.className = 'js';
 	</script>
@@ -30,8 +37,16 @@
 		src="http://localhost/wordpress-trunk/wp-content/themes/Origin/js/bottom_nav.js";
 	</script>
 
-	<script type='text/javascript'> src="js/cart.js";
+	<script type='text/javascript'> src="js/info_button.js";
 	</script> 
+
+
+
+	  <script>
+	  $(function() {
+	    $( ".accordion" ).accordion({collapsible: true, active: false, heightStyle: "content"});
+	  });
+	  </script>
 
 	<?php wp_head(); ?>
 
@@ -48,9 +63,9 @@
 
 	    <button class='navbutton' id='navbutton2'><a href="<?php echo get_page_link( get_page_by_title( Produce )->ID ); ?>"><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-home-inactive.png'></a></button>
 
-	    <button class='navbutton' id='navbutton3'><a href="<?php echo get_page_link( get_page_by_title( Cart )->ID ); ?>"><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></a></button>
+	    <button class='navbutton' id='navbutton3'><a href="<?php echo get_page_link( get_page_by_title( Strawberries )->ID ); ?>"><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></a></button>
 
-	    <button class='navbutton' id='navbutton4'><a href="<?php echo get_page_link( get_page_by_title( Likes )->ID ); ?>"><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-likes-inactive.png'></a></button>
+	    <!--<button class='navbutton' id='navbutton4'><a href="<?php echo get_page_link( get_page_by_title( Likes )->ID ); ?>"><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-likes-inactive.png'></a></button>-->
 
 	</nav>
 
@@ -94,6 +109,12 @@
 
 			<?php get_sidebar(); ?>
 		</div> <!-- #info-area -->
+
+		<div class='date-banner'>
+
+			<span id='date-banner-text'>May in California</span>			
+
+		</div>
 
 		<div id="main">
 			<div id="wrapper">

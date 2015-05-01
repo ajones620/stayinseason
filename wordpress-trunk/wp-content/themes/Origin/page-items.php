@@ -35,9 +35,9 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 		<div class='card-sidebar'>
 
-			<button class='card-sidebar-button'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
+			<button class='card-sidebar-button-cart'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
 
-			<button class='card-sidebar-button'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
+			<button class='card-sidebar-button-info'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/more-info.png'></button>
 
 		</div>
 
@@ -52,9 +52,9 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 		<div class='card-sidebar'>
 
-			<button class='card-sidebar-button'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
+			<button class='card-sidebar-button-cart'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
 
-			<button class='card-sidebar-button'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
+			<button class='card-sidebar-button-info'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/more-info.png'></button>
 
 		</div>
 
@@ -69,9 +69,9 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 		<div class='card-sidebar'>
 
-			<button class='card-sidebar-button'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
+			<button class='card-sidebar-button-cart'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
 
-			<button class='card-sidebar-button'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/bottom-nav-cart-inactive-empty.png'></button>
+			<button class='card-sidebar-button-info'><img src='http://localhost/wordpress-trunk/wp-content/themes/Origin/images/more-info.png'></button>
 
 		</div>
 

@@ -99,16 +99,60 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 /*---------------[CARD LAYOUT & STYLING]---------------*/
 /*------------------------------------------------*/
 
+.date-banner-text { color: white; text-align: center; }
 
-.item-card { position: relative; width: 90%; height: 170px; float: center; background: none; box-shadow: 4px 4px 4px #909090; border: none; margin-left: 5%; margin-bottom: 7%;}
+
+.item-card, .item-detail-info-card, .prep-wrapper { position: relative; width: 90%; height: 170px; float: center; background: none; box-shadow: 4px 4px 4px #909090; border-radius: 2px; margin-left: 5%; margin-bottom: 7%;}
 
 .item-name { position: absolute; font-size: 1.6em; color: white; left: 5%; top: 5.7em; z-index: 99999; }
 
 .item-pic { overflow: hidden; width: 94%; height: 170px; background-position: center; background-size: cover; }
 
-.card-sidebar { position: absolute; z-index: 9999; width: 15%; height: 100%; left: 85%; top: 0; background: #ffffff; }
+.card-sidebar { position: absolute; z-index: 9999; width: 15%; height: 100%; left: 85%; top: 0; background: #ffffff; border-top-right-radius: 2px; border-bottom-right-radius: 2px;}
 
-.card-sidebar-button { position: relative; width: 100%; height: auto; margin-top: 50%; margin-bottom: 50%; background: none; border: none; }
+.card-sidebar-button-cart,  .card-sidebar-button-info { position: relative; width: 100%; height: auto; margin-top: 60%; margin-bottom: 55%; background: none; border: none; }
+
+
+body.page #main h3 { color: white; font-size: 20px; }
+
+.accordion { background: none; position: relative; clear: both; margin-left: 5%; margin-bottom: 7%; width: 90%; border: none; border-radius: 2px; box-shadow: 4px 4px 4px #909090; }
+
+.ui-accordion .ui-accordion-header { background: none; margin: 0; border: none;}
+
+.ui-corner-all { border-radius: 2px;}
+
+.ui-accordion-content { background: #5f3916; color: white; height: auto;}
+
+
+.prep-wrapper { background: #5f3916; height: auto; }
+
+.prep-detail-info-card { height: auto; clear: both;}
+
+.prep-detail-info-card-title { position: relative; margin-top: 15px; margin-right: 15px; margin-bottom: 20px; float: right; color: white; font-size: 20px; }
+
+.prep-detail-info-text { position: relative; margin-top: 15px; margin-left: 15px; margin-right: 15px; float; left; clear: both; color: white; font-size: 16px; }
+
+.like-dislike-wrapper { position: relative; margin-top: 10px; width: 100%; height: auto; }
+
+.like-button, .dislike-button, .like-dislike-button-text { position: absolute; height: 35px; width: auto; float: left; margin-left: 20%; margin-bottom: -20px; clear: both; background: none; border: none; }
+
+.dislike-button { float: right; }
+
+
+#preparation { float: left; margin-left: 15px; margin-bottom: 0px; border-bottom-left-radius: none; border-bottom-right-radius: none; }
+
+#prep1 { background: #e74c3c; }
+
+#prep2 { background: #f39c12; }
+
+#prep3 { background: #27ae60; }
+
+
+.item-detail-info-card { background: #5f3916; height: auto; }
+
+.item-detail-info-card-title { position: relative; margin-top: 15px; margin-left: 15px; margin-bottom: 20px; float: left; color: white; font-size: 20px; }
+
+.item-detail-info-text { position: relative; margin-top: 15px; margin-left: 15px; margin-right: 15px; margin-bottom: 15px; float; left; clear: both; color: white; font-size: 16px; }
 
 
 #strawberries { background-image: url('http://localhost/wordpress-trunk/wp-content/themes/Origin/images/items/strawberries.png'); }
@@ -130,7 +174,7 @@ img { max-width: 100%; height: auto; -ms-interpolation-mode: bicubic; }
 #info-area { float: center; position: relative; padding-top: 20px; z-index: 4; }
 	#logo-area { position: relative; left: 20%; text-align: center; margin-bottom: 0px; max-width: 60%; height: 20%; max-height: 20%; z-index: 5;}
 
-#logo { margin-top: -5px; padding-bottom: 5px; height: 35px;}
+#logo { margin-top: -3px; padding-bottom: 5px; height: 35px;}
 
 .entry-image .readmore { -moz-border-radius: 100%; -webkit-border-radius: 100%; border-radius: 100%; -moz-box-shadow: 0 0 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 0 4px rgba(0,0,0,0.1); box-shadow: 0 0 4px rgba(0,0,0,0.1); width: 42px; height: 42px; background: #fff; text-indent: -9999px; position: relative; display: inline-block; overflow: hidden; }
 	.entry-image .readmore span { position: absolute; top: 9px; left: 9px; background: url(images/zoom.png) no-repeat; width: 23px; height: 24px; display: block; }
@@ -476,10 +520,23 @@ embed, iframe, object, video { max-width: 100%; }
 @media screen and (max-width: 1023px) {
 
 	.main-title {
-	
-	display: none;
+		display: none;
+	}
 
-}
+	.date-banner {
+		position: fixed;
+		width: 100%;
+		height: 24px;
+		line-height: 24px;
+		top: 60px;
+		z-index: 999999;
+		text-align: center;
+		font-size: 16px;
+		color: white;
+		background: #1c8245;
+		opacity: .9;
+		/*box-shadow: 0px 3px 4px #7f7f7f;*/
+	}
 
 	.fixed-nav-bar {
   		position: fixed;
@@ -494,7 +551,7 @@ embed, iframe, object, video { max-width: 100%; }
 	.navbutton {
 		position: absolute;
 		height: 100%;
-		width: 25%;
+		width: 33%;
 		top: 2px;
 		font-size: 24px;
 		color: #d35400;
@@ -510,22 +567,22 @@ embed, iframe, object, video { max-width: 100%; }
 
 	#navbutton2 {
 
-		left: 25%;
+		left: 33%;
 
 	}
 
 	#navbutton3 {
 
-		left: 50%;
+		left: 67%;
 
 	}
 
-
+/*
 	#navbutton4 {
 
 		left: 75%;
 
-	}
+	}*/
 
 	#mobile-nav {
 
@@ -535,7 +592,7 @@ embed, iframe, object, video { max-width: 100%; }
 
 	.entry-image { width: 33.3%; }
 	#info-bg, #sidebar, #main-wrap:before { display: none; }
-	#info-area { position: fixed; float: none; top: 0; width: 100%; height: 7%; border-right: none; background: #6AB3B2; -webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.08); -moz-box-shadow: 0 4px 4px rgba(0,0,0,0.08); box-shadow: 0 4px 4px rgba(0,0,0,0.58); }
+	#info-area { position: fixed; float: none; top: 0; width: 100%; height: 40px; line-height: 40px; border-right: none; background: #6AB3B2; opacity: 1; /*-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.08); -moz-box-shadow: 0 4px 4px rgba(0,0,0,0.08); box-shadow: 0 4px 4px rgba(0,0,0,0.58);*/ }
 	#main { margin: 0; }
 
 	#top-menu { display: none; }
@@ -544,6 +601,8 @@ embed, iframe, object, video { max-width: 100%; }
 	#mobile-nav { display: none; }
 
 	#logo-area { margin-bottom: 0; padding-bottom: 0px; }
+
+
 }
 
 @media screen and (min-width: 930px) and (max-width: 1023px) {
