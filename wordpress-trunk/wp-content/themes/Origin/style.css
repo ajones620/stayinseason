@@ -102,7 +102,40 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 .date-banner-text { color: white; text-align: center; }
 
 
-.item-card, .item-detail-info-card, .prep-wrapper { position: relative; width: 90%; height: 170px; float: center; background: none; box-shadow: 4px 4px 4px #909090; border-radius: 2px; margin-left: 5%; margin-bottom: 7%;}
+.item-detail-banner { 
+	position: fixed;
+	z-index: 999999;
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	background: black;
+	left: 0;
+	top: 84px;
+	opacity: .9;
+	font-size: 1.6em;
+	color: white;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	background-image: url('http://localhost/wordpress-trunk/wp-content/themes/Origin/images/items/strawberries.png');
+}
+
+.item-detail-banner-text {
+	position: absolute;
+}
+
+
+.item-card, .item-detail-info-card, .prep-wrapper {
+	position: relative;
+	width: 90%;
+	height: 170px;
+	float: center;
+	background: none;
+	box-shadow: 2px 2px 4px #909090;
+	border-radius: 2px;
+	margin-left: 5%;
+	margin-bottom: 7%;
+}
 
 .item-name { position: absolute; font-size: 1.6em; color: white; left: 5%; top: 5.7em; z-index: 99999; }
 
@@ -111,6 +144,22 @@ img#about-image { float: left; margin: 3px 8px 8px 0px; }
 .card-sidebar { position: absolute; z-index: 9999; width: 15%; height: 100%; left: 85%; top: 0; background: #ffffff; border-top-right-radius: 2px; border-bottom-right-radius: 2px;}
 
 .card-sidebar-button-cart,  .card-sidebar-button-info { position: relative; width: 100%; height: auto; margin-top: 60%; margin-bottom: 55%; background: none; border: none; }
+
+.card-sidebar-button-cart { width: 200%; margin-left: -50%; }
+
+@-webkit-keyframes cart-bounce {
+	from { margin-top: 60%; }
+	50% { margin-top: 30%; }
+	to { margin-top: 60%; }
+}
+
+@-webkit-keyframes info-reverse-bounce {
+	from { margin-top: 60%; }
+	50% { margin-top: 87%; }
+	to { margin-top: 60%; }
+}
+
+
 
 
 body.page #main h3 { color: white; font-size: 20px; }
@@ -139,7 +188,7 @@ body.page #main h3 { color: white; font-size: 20px; }
 .dislike-button { float: right; }
 
 
-#preparation { float: left; margin-left: 15px; margin-bottom: 0px; border-bottom-left-radius: none; border-bottom-right-radius: none; }
+#preparation { float: left; margin-left: 16px; margin-bottom: 0px; border-bottom-left-radius: none; border-bottom-right-radius: none; }
 
 #prep1 { background: #e74c3c; }
 
@@ -545,7 +594,10 @@ embed, iframe, object, video { max-width: 100%; }
   		z-index: 9999;
   		width: 100%;
   		height: 50px;
-  		background-color: #846f61;
+  		background: #8e796b;
+  		/*background: #6E4A25;*/
+  		/*background: #846f61;*/
+  		/*background: #76281b;*/
 	}
 
 	.navbutton {
@@ -560,21 +612,30 @@ embed, iframe, object, video { max-width: 100%; }
 	}
 
 	#navbutton1 {
-
 		left: 0;
-
 	}
 
 	#navbutton2 {
-
 		left: 33%;
-
 	}
 
 	#navbutton3 {
-
 		left: 67%;
+	}
 
+	.cart-size {
+		position: absolute;
+		z-index: 999999;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		background: red;
+		color: white;
+		text-align: center;
+		font-size: 12px;
+		border-radius: 50%;
+		left: 57%;
+		top: 2px;
 	}
 
 /*
@@ -592,7 +653,18 @@ embed, iframe, object, video { max-width: 100%; }
 
 	.entry-image { width: 33.3%; }
 	#info-bg, #sidebar, #main-wrap:before { display: none; }
-	#info-area { position: fixed; float: none; top: 0; width: 100%; height: 40px; line-height: 40px; border-right: none; background: #6AB3B2; opacity: 1; /*-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.08); -moz-box-shadow: 0 4px 4px rgba(0,0,0,0.08); box-shadow: 0 4px 4px rgba(0,0,0,0.58);*/ }
+	#info-area { 
+		position: fixed;
+		float: none;
+		top: 0;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		border-right: none;
+		background: #83e55e;
+		/*background: #6AB3B2;*/
+		opacity: 1;
+		/*-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.08); -moz-box-shadow: 0 4px 4px rgba(0,0,0,0.08); box-shadow: 0 4px 4px rgba(0,0,0,0.58);*/ }
 	#main { margin: 0; }
 
 	#top-menu { display: none; }

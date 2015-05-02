@@ -23,7 +23,13 @@ $et_ptemplate_gallery_perpage = isset( $et_ptemplate_settings['et_ptemplate_gall
 
 <div id="main-content">
 
-	<div id='spacer'><br><br><br><br></div>
+	<div class='item-detail-banner'>
+		<span class='item-detail-banner-name'>Strawberries</span>
+		
+		<div class='item-pic'></div>
+	</div>
+
+	<div id='spacer'><br><br><br><br><br><br><br><br><br><br><br><br></div>
 
 
 	<div class='item-detail-info-card' id='preparation'>
